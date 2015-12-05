@@ -19,22 +19,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nhc-OP-fTS">
-                                <rect key="frame" x="-4" y="20" width="383" height="627"/>
+                                <rect key="frame" x="-8" y="64" width="391" height="583"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="cV1-XU-zJN"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="nhc-OP-fTS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CD9-cn-EE6"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="nhc-OP-fTS" secondAttribute="trailing" constant="-20" id="LfF-yM-ep5"/>
-                            <constraint firstItem="nhc-OP-fTS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-44" id="WWx-YW-ulx"/>
-                            <constraint firstItem="nhc-OP-fTS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="YFr-ib-Wm6"/>
-                            <constraint firstItem="nhc-OP-fTS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fry-Hd-WoW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nhc-OP-fTS" secondAttribute="trailing" constant="-24" id="LfF-yM-ep5"/>
+                            <constraint firstItem="nhc-OP-fTS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="WWx-YW-ulx"/>
+                            <constraint firstItem="nhc-OP-fTS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-24" id="YFr-ib-Wm6"/>
+                            <constraint firstItem="nhc-OP-fTS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="22" id="fry-Hd-WoW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="J3v-4H-KgI"/>
+                    <navigationItem key="navigationItem" id="J3v-4H-KgI">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="tIC-df-DcJ">
+                            <connections>
+                                <action selector="AddItemTODO:" destination="BYZ-38-t0r" id="46F-EU-ffe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="TODOList" destination="nhc-OP-fTS" id="LEe-GE-mmX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
