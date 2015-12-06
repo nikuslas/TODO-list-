@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     //Creat tableView for TODO list
     @IBOutlet weak var TODOList: UITableView!
@@ -20,7 +20,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        title = "\"The TODO List\""
+        title = "TODO"
         TODOList.registerClass(UITableViewCell.self,
             forCellReuseIdentifier: "Cell")
     }
@@ -35,8 +35,7 @@ class ViewController: UIViewController, UITableViewDataSource {
             return item.count
     }
     
-    func tableView(tableView: UITableView,
-        cellForRowAtIndexPath
+    func tableView(tableView: UITableView, cellForRowAtIndexPath
         indexPath: NSIndexPath) -> UITableViewCell {
             
             let cell =
@@ -50,7 +49,7 @@ class ViewController: UIViewController, UITableViewDataSource {
             return cell!
     }
     
-    func saveName(name: String) {
+    func saveName(itemname: String) {
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
@@ -60,7 +59,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         let iitem = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
         
-        iitem.setValue(name, forKey: "itemtodo")
+        iitem.setValue(itemname, forKey: "itemtodo")
         
         do {
             try managedContext.save()
@@ -125,8 +124,29 @@ class ViewController: UIViewController, UITableViewDataSource {
 
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == UITableViewCellEditingStyle.Delete {
+
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            
+            let managedContext = appDelegate.managedObjectContext
+            
+            let itemToDelete = item[indexPath.row]
+            
+            
+            managedContext.deleteObject(itemToDelete)
+            
             item.removeAtIndex(indexPath.row)
+            
+            do {
+                try managedContext.save()
+            } catch let error as NSError  {
+                print("Could not save \(error), \(error.userInfo)")
+            }
+
+            
+            
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+            
+            
         }
     }
     
