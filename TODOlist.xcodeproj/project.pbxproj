@@ -15,6 +15,7 @@
 		7628BC9C1C1345A7008676FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7628BC9A1C1345A7008676FA /* LaunchScreen.storyboard */; };
 		7628BCA71C1345A7008676FA /* TODOlistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7628BCA61C1345A7008676FA /* TODOlistTests.swift */; };
 		7628BCB21C1345A7008676FA /* TODOlistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7628BCB11C1345A7008676FA /* TODOlistUITests.swift */; };
+		76B8F5DE1C14B9B10071ED39 /* To-Do-List1.png in Resources */ = {isa = PBXBuildFile; fileRef = 76B8F5DD1C14B9B10071ED39 /* To-Do-List1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		7628BCAD1C1345A7008676FA /* TODOlistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TODOlistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7628BCB11C1345A7008676FA /* TODOlistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODOlistUITests.swift; sourceTree = "<group>"; };
 		7628BCB31C1345A7008676FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76B8F5DD1C14B9B10071ED39 /* To-Do-List1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "To-Do-List1.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				7628BC921C1345A7008676FA /* Main.storyboard */,
 				7628BC981C1345A7008676FA /* Assets.xcassets */,
 				7628BC9A1C1345A7008676FA /* LaunchScreen.storyboard */,
+				76B8F5DD1C14B9B10071ED39 /* To-Do-List1.png */,
 				7628BC9D1C1345A7008676FA /* Info.plist */,
 				7628BC951C1345A7008676FA /* TODOlist.xcdatamodeld */,
 			);
@@ -235,6 +238,7 @@
 				7628BC9C1C1345A7008676FA /* LaunchScreen.storyboard in Resources */,
 				7628BC991C1345A7008676FA /* Assets.xcassets in Resources */,
 				7628BC941C1345A7008676FA /* Main.storyboard in Resources */,
+				76B8F5DE1C14B9B10071ED39 /* To-Do-List1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +492,7 @@
 				7628BCB81C1345A7008676FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7628BCB91C1345A7008676FA /* Build configuration list for PBXNativeTarget "TODOlistTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +501,7 @@
 				7628BCBB1C1345A7008676FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7628BCBC1C1345A7008676FA /* Build configuration list for PBXNativeTarget "TODOlistUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +510,7 @@
 				7628BCBE1C1345A7008676FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
